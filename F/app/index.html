@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app = "SGC">
+  <head>
+    <meta charset="utf-8">
+    <title>SGC</title>
+	   <script src="/assets/js/deps.min.js"></script>
+    <script src="/assets/js/app.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(function(){
+                $('#cep').mask('00000-000');
+                $('#telefone').mask('(00) 0000-0000');
+                $('#datanascimento').mask('00/00/0000');
+            });
+    });
+
+    </script>
+    <link rel="stylesheet" href="/assets/css/deps.min.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+  </head>
+  <body class="skin-blue fixed sidebar-mini">
+    <div class="wrapper">
+      <header class="main-header" ng-include="'/template/header.html'"></header>
+      <aside class="main-sidebar" ng-include="'/template/menu.html'"></aside>
+      <div class="content-wrapper" ui-view></div>
+      <footer class="main-footer" ng-include = "'/template/footer.html'" ></footer>
+    </div>
+  </body>
+</html>

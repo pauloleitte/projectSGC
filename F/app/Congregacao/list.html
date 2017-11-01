@@ -1,0 +1,25 @@
+<div class="box-body">
+  <table class = "table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ministerio</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="Congregacao in cgCtrl.Congregacaos">
+        <td>{{ Congregacao.nomeCongregacao }}</td>
+        <td>{{ Congregacao.ministerio }}</td>
+        <td>{{ Congregacao.telefone }}</td>
+        <td class = "table-actions">
+          <button class="btn btn-warning" ng-click="cgCtrl.showTabUpdate(Congregacao)">
+            <i class= "fa fa-pencil"></i></button>
+          <button class="btn btn-danger" ng-click="cgCtrl.showTabDelete(Congregacao)">
+            <i class= "fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
