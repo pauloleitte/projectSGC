@@ -1,5 +1,6 @@
 angular.module('SGC',[
   'ui.router',
   'ngAnimate',
-  'toastr'
+  'toastr',
+  'ui.utils.masks'
 ])
