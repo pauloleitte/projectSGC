@@ -33,6 +33,7 @@
     "run-sequence": "2.2.0"
   },
   "dependencies": {
-    "angular-input-masks": "^4.0.0"
+    "angular-input-masks": "^4.0.0",
+    "ng-mask": "^3.1.1"
   }
 }

@@ -19,7 +19,8 @@ gulp.task('deps.js', () => {
     'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
     'node_modules/admin-lte/bootstrap/js/bootstrap.min.js',
     'node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',
-    'node_modules/admin-lte/dist/js/app.min.js'
+    'node_modules/admin-lte/dist/js/app.min.js',
+    'node_modules/ng-mask/dist/ngMask.min.js'
   ])
   .pipe(uglify())
   .pipe(concat('deps.min.js'))

@@ -39,8 +39,8 @@
           <div class="input-group-addon">
             <i class= "fa fa-phone"></i>
           </div>
-          <input class="form-control" placeholder="Informe o telefone" ui-br-phone-number
-              type="text" ng-model=cgCtrl.Membro.telefone ng-readonly="cgCtrl.tabDelete"/>
+          <input class="form-control" placeholder="Informe o telefone" mask="(99) 9?9999-9999"
+              type="text" ng-model=cgCtrl.Membro.telefone ng-readonly="cgCtrl.tabDelete" />
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@
             <i class="fa fa-calendar"></i>
             </div>
             <input class="form-control pull-right" placeholder="Informe a Data de Nascimento"
-             ui-date-mask="DD/MM/YYYY" type="text" ng-model=cgCtrl.Membro.dataNascimento ng-readonly="cgCtrl.tabDelete"/>
+            mask="39/19/9999" type="text" ng-model=cgCtrl.Membro.dataNascimento ng-readonly="cgCtrl.tabDelete"/>
           </div>
         </div>
       </div>
