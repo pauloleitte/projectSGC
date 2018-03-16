@@ -11,7 +11,7 @@
     const vm = this
     const url = 'http://localhost:3003/api/Membro'
 
-    
+    vm.listaDeSexos = ["Masculino", "Feminino"]
 
     vm.refresh = function(){
     const page = parseInt($location.search().page) || 1

@@ -53,7 +53,7 @@
             <i class= "fa fa-phone"></i>
           </div>
           <input id="telefone" class="form-control" placeholder="Informe o telefone"
-             type="text" ng-model=cgCtrl.Congregacao.telefone ng-readonly="cgCtrl.tabDelete"/>
+          mask="(99) 9999-9999" type="text" ng-model=cgCtrl.Congregacao.telefone ng-readonly="cgCtrl.tabDelete"/>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
                     <i class= "fa fa-street-view"></i>
                   </div>
                   <input id="cep" class="form-control" placeholder="Informe o CEP"
-                     ui-br-cep-mask type="text" ng-model=cgCtrl.Congregacao.cep ng-readonly="cgCtrl.tabDelete" ng-blur="cgCtrl.getCep(cgCtrl.Congregacao.cep)"/>
+                    mask="99999-999" type="text" ng-model=cgCtrl.Congregacao.cep ng-readonly="cgCtrl.tabDelete" ng-blur="cgCtrl.getCep(cgCtrl.Congregacao.cep)"/>
                 </div>
               </div>
             </div>

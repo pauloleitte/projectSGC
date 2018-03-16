@@ -52,9 +52,7 @@
             <i class= "fa fa-venus-mars"></i>
           </div>
           <select class="form-control" data-toggle="tooltip"
-          data-original-title="Informe o Sexo" ng-model="cgCtrl.Membro.sexo" ng-readonly="cgCtrl.tabDelete">
-        <option>Feminino</option>
-        <option>Masculino</option>      
+          data-original-title="Informe o Sexo" ng-model="cgCtrl.Membro.sexo" ng-readonly="cgCtrl.tabDelete"  ng-options="sexo for sexo in cgCtrl.listaDeSexos" >
           </select>
         </div>
       </div>
