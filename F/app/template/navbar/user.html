@@ -1,0 +1,25 @@
+<a href class="dropdown-toggle" data-toggle="dropdown">
+    <img src="https://image.freepik.com/icones-gratis/imagem-do-usuario-com-fundo-preto_318-34564.jpg" class="user-image" alt="User Image">
+    <span class="hidden-xs">{{:: auth.getUser().name }}</span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- User image -->
+    <li class="user-header">
+      <img src="https://image.freepik.com/icones-gratis/imagem-do-usuario-com-fundo-preto_318-34564.jpg" class="img-circle" alt="User Image">
+      <p>
+          {{:: auth.getUser().name }}
+        <small>{{:: auth.getUser().email }}</small>
+      </p>
+    </li>
+    <!-- Menu Body -->
+    <li class="user-body">
+      <div class="row">
+      </div>
+    </li>
+    <!-- Menu Footer-->
+    <li class="user-footer">
+      <div class="pull-center">
+        <a href class="btn btn-default btn-flat" ng-click="auth.signup()">Sair</a>
+      </div>
+    </li>
+  </ul>
