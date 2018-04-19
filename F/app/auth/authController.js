@@ -1,27 +1,32 @@
-angular.module('SGC').controller('AuthCtrl', [
-    '$location',
-    'msgs',
-    AuthController
-])
-function AuthController($location, msgs) {
+(function () {
 
-    const vm = this
-    vm.getUser = () => ({ name: 'Paulo', email: 'paulo.leitte@live.com' })
+    angular.module('SGC').controller('AuthCtrl', [
+        '$location',
+        'msgs',
+        'auth',
+        AuthController
+    ])
 
-    vm.logout = () => {
-        console.log('Logout...')
+    function AuthController($location, msgs, auth) {
+        const vm = this
+
+        vm.loginMode = true
+
+        vm.changeMode = () => vm.loginMode = !vm.loginMode
+
+        vm.login = () => {
+            auth.login(vm.user, err => err ? msgs.addError(err) : $location.path('/'))
+        }
+
+        vm.signup = () => {
+            auth.signup(vm.user, err => err ? msgs.addError(err) : $location.path('/'))
+        }
+
+        vm.getUser = () => auth.getUser()
+
+        vm.logout = () => {
+            auth.logout(() => $location.path('/'))
+        }
     }
 
-    vm.loginMode = true
-    vm.changeMode = () => vm.loginMode = !vm.loginMode
-
-    vm.login = () => {
-        console.log(`Login...`)
-
-    }
-    vm.signup = () => {
-        console.log(`Signup...`)    
-    }
-
-}
-
+})()

@@ -14,7 +14,8 @@ angular.module('SGC').config([
     }).state('departamentos',{
       url: "/Departamentos?page",
       templateUrl: "Departamento/tabs.html"
+    }).state('auth',{
+      url: "/Auth",
+      templateUrl: "/auth.html"
     })
-
-    $urlRouterProvider.otherwise('/dashboard')
 }])
