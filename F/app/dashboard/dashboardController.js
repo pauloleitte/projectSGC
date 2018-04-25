@@ -6,27 +6,37 @@ angular.module('SGC').controller('DashboardCtrl', [
 function DashboardController($http)
 {
   const vm = this
-  const valor1 = 0
+  const value = 0
   vm.getdashboardCongregacao = function()
   {
 
-    const url = 'http://localhost:3003/api/Congregacao/count'
+    const url = 'http://localhost:3003/api/congregacao/count'
     $http.get(url).then(function(response)
     {
-        const value1 = response.data.value
-        vm.one = value1
+        const value = response.data.value
+        vm.one = value
     })
   }
   vm.getdashboardMembro = function()
   {
-    const url = 'http://localhost:3003/api/Membro/count'
+    const url = 'http://localhost:3003/api/membro/count'
     $http.get(url).then(function(response)
     {
-        const value1 = response.data.value
-        vm.two = value1
+        const value = response.data.value
+        vm.two = value
+    })
+  }
+
+  vm.getdashboardEvento = function(){
+    const url = 'http://localhost:3003/api/evento/count'
+    $http.get(url).then(function(response)
+    {
+        const value = response.data.value
+        vm.three = value
     })
   }
   vm.getdashboardCongregacao()
   vm.getdashboardMembro()
+  vm.getdashboardEvento()
 
 }

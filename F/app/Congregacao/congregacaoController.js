@@ -7,7 +7,7 @@
   ])
   function congregacaoController($http,msgs,tabs){
     const vm = this
-    const url = 'http://localhost:3003/api/Congregacao'
+    const url = 'http://localhost:3003/api/congregacao'
 
 
     vm.refresh = function(){
@@ -49,7 +49,6 @@
       }
 
     vm.create = function(){
-          const url = 'http://localhost:3003/api/Congregacao'
            $http.post(url, vm.Congregacao).then(function(response){
                vm.Congregacao = {}
                vm.refresh()

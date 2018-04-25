@@ -7,24 +7,13 @@
     <tbody>
       <tr ng-repeat="dizimo in cgCtrl.Membro.dizimos">
         <td>
-           <div class = "col-xs-12"> 
-                 <div class = "input-group">
-                    <div class="input-group-addon">
-                      <i class= "fa  fa-calendar"></i>
-                    </div>
-                      <input class="form-control" placeholder="Informe o Mês"
-                      type="text" ng-model="dizimo.mes_dizimo" ng-readonly="cgCtrl.tabDelete"/>
-                </div>
-           </div>
-        </td>
-        <td>
           <div class = "col-xs-12"> 
                  <div class = "input-group">
                     <div class="input-group-addon">
                       <i class= "fa  fa-calendar"></i>
                     </div>
-                      <input class="form-control" placeholder="Informe o Ano"
-                      type="text" ng-model="dizimo.ano_dizimo" ng-readonly="cgCtrl.tabDelete"/>
+                      <input class="form-control" placeholder="Informe a Data de Pagamento" mask="99/99/9999"
+                      type="text" ng-model=dizimo.data_pagamento ng-readonly="cgCtrl.tabDelete"/>
                 </div>
            </div>
         </td>
@@ -34,8 +23,8 @@
                     <div class="input-group-addon">
                       <i class= "fa fa-dollar"></i>
                     </div>
-                      <input ng-model="dizimo.vl_dizimo" class="form-control" placeholder="Informe o valor"
-                      ng-readonly="cgCtrl.tabDelete" ng-change="cgCtrl.calculateValues()" ui-money-mask/>
+                      <input ng-model="dizimo.valor" class="form-control" placeholder="Informe o valor"
+                      ng-readonly="cgCtrl.tabDelete" ng-change="cgCtrl.calculateValues()"/>
                 </div>
            </div>     
         </td>

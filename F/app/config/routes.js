@@ -9,15 +9,18 @@ angular.module('SGC').config([
     }).state('congregacao', {
       url: "/Congregacao?page",
       templateUrl: "Congregacao/tabs.html"
-    }).state('membros',{
-      url: "/Membros?page",
+    }).state('membro',{
+      url: "/Membro?page",
       templateUrl: "Membro/tabs.html"
-    }).state('departamentos',{
-      url: "/Departamentos?page",
+    }).state('departamento',{
+      url: "/Departamento?page",
       templateUrl: "Departamento/tabs.html"
     }).state('auth',{
       url: "/Auth",
       templateUrl: "/auth.html"
+    }).state('evento',{
+      url: "/Evento?page",
+      templateUrl: "Evento/tabs.html"
     })
     $httpProvider.interceptors.push('handleResponseError')
 }]).run([

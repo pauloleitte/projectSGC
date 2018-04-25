@@ -7,7 +7,7 @@ angular.module('SGC').controller('departamentoCtrl',[
 ])
 function departamentoController($http,msgs,tabs){
     const vm = this
-    const url = 'http://localhost:3003/api/Departamento'
+    const url = 'http://localhost:3003/api/departamento'
 
     vm.refresh = function(){
         $http.get(url).then(function (response) {

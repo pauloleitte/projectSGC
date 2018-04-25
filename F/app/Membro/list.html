@@ -10,8 +10,8 @@
     </thead>
     <tbody>
       <tr ng-repeat="Membro in cgCtrl.Membros">
-        <td>{{ Membro.nomeMembro }}</td>
-        <td>{{ Membro.cargo }}</td>
+        <td>{{ Membro.nome }}</td>
+        <td>{{ Membro.tipo }}</td>
         <td>{{ Membro.telefone }}</td>
         <td class = "table-actions">
           <button class="btn btn-warning" ng-click="cgCtrl.showTabUpdate(Membro)">
