@@ -41,7 +41,7 @@
     vm.update = function () {
       vm.calculateValues()
       const updateUrl = `${url}/${vm.Membro._id}`
-      $http.put(updateUrl, vm.Membro).then(function (responde) {
+      $http.put(updateUrl, vm.Membro).then(function (response) {
         vm.refresh()
         msgs.addSuccess('Operação realizada com sucesso')
       }).catch(function (resp) {
@@ -109,7 +109,6 @@
 
       var result = cep
       result = result.replace("-", "");
-      console.log(result)
       const viacep = "http://viacep.com.br/ws/" + result + "/json/"
 
       $http.get(viacep).then(function (response) {
