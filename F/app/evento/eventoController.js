@@ -89,8 +89,8 @@
     vm.addPartipante = function (index) {
       vm.Evento.participantes.splice(index + 1, 0, { nome: null, sexo: null, idade: null })
     }
-    vm.clonePartipante = function (index, { valor, data_pagamento, }) {
-      vm.Evento.participantes.splice(index + 1, 0, { valor, data_pagamento })
+    vm.clonePartipante = function (index, { nome, sexo, idade }) {
+      vm.Evento.participantes.splice(index + 1, 0, { nome, sexo, idade })
       initParcipantes()
     }
     vm.deletePartipante = function (index) {
