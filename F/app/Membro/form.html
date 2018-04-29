@@ -51,7 +51,7 @@
             <i class= "fa fa-venus-mars"></i>
           </div>
           <select class="form-control" data-toggle="tooltip"
-          data-original-title="Informe o Sexo" ng-model="cgCtrl.Membro.sexo" ng-readonly="cgCtrl.tabDelete"  ng-options="sexo for sexo in cgCtrl.listaDeSexos" >
+          data-original-title="Informe o Sexo" ng-model="cgCtrl.Membro.sexo" ng-disabled="cgCtrl.tabDelete"  ng-options="sexo for sexo in cgCtrl.listaDeSexos" >
           </select>
         </div>
       </div>
@@ -65,7 +65,7 @@
           </div>
         <select class="form-control" data-toggle="tooltip"
           data-original-title="Informe o Estado Civil" ng-model="cgCtrl.Membro.estado_civil"  ng-options="civil for civil in cgCtrl.listaDeEstadoCivis"
-          ng-readonly="cgCtrl.tabDelete">
+          ng-disabled="cgCtrl.tabDelete">
           </select>
         </div>
       </div>
@@ -79,7 +79,7 @@
           </div>
           <select class="form-control" data-toggle="tooltip"
           data-original-title="Informe o Cargo" ng-model="cgCtrl.Membro.tipo" ng-options="tipo for tipo in cgCtrl.listaDeTipos"
-          ng-readonly="cgCtrl.tabDelete">
+          ng-disabled="cgCtrl.tabDelete">
           </select>
         </div>
       </div>

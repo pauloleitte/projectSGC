@@ -26,7 +26,7 @@
             <div class="input-group-addon">
               <i class= "fa fa-user"></i>
             </div>
-            <select id= "local_evento" class="form-control"  data-toggle="tooltip" data-original-title="Informe o Local do Evento" ng-model="cgCtrl.Evento.local" ng-readonly="cgCtrl.tabDelete">
+            <select id= "local_evento" class="form-control"  data-toggle="tooltip" data-original-title="Informe o Local do Evento" ng-model="cgCtrl.Evento.local" ng-disabled="cgCtrl.tabDelete">
               <option ng-repeat="x in cgCtrl.Congregacaos" value="{{x.nome}}">{{x.nome}}</option>
               </select>
           </div>
@@ -39,8 +39,8 @@
             <div class="input-group-addon">
               <i class= "fa fa-venus-mars"></i>
             </div>
-            <select id= "tipo" class="form-control" data-toggle="tooltip"
-            data-original-title="Informe o Tipo" ng-model="cgCtrl.Evento.tipo" ng-readonly="cgCtrl.tabDelete"  ng-options="tipo for tipo in cgCtrl.listaDeTipos" >
+            <select id= "tipo" class="form-control" data-toggle="tooltip" ng-disabled="cgCtrl.tabDelete"
+            data-original-title="Informe o Tipo" ng-model="cgCtrl.Evento.tipo" ng-options="tipo for tipo in cgCtrl.listaDeTipos" >
             </select>
           </div>
         </div>
