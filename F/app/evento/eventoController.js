@@ -3,9 +3,10 @@
     '$http',
     'msgs',
     'tabs',
+    '$location',
     eventoController
   ])
-  function eventoController($http, msgs, tabs) {
+  function eventoController($http, msgs, tabs, $location) {
     const vm = this
     const url = 'http://localhost:3003/api/evento'
     const url_congregacao = 'http://localhost:3003/api/congregacao'
@@ -17,19 +18,24 @@
 
     vm.Congregacaos = [{}]
 
-    vm.getCongregacao = function (){
-      $http.get(url_congregacao).then(function(response){
+    vm.getCongregacao = function () {
+      $http.get(url_congregacao).then(function (response) {
         vm.Congregacaos = response.data
-      }).catch(function(res){
+      }).catch(function (res) {
         console.log(res.data.errors)
       })
     }
 
     vm.refresh = function () {
-      $http.get(url).then(function (response) {
+      const page = parseInt($location.search().page) || 1
+      const url_page = `${url}?skip=${(page - 1) * 10}&limit=10`
+      $http.get(url_page).then(function (response) {
         vm.getCongregacao()
         vm.Evento = { participantes: [{}] }
         vm.Eventos = response.data
+      })
+      $http.get(`${url}/count`).then(function (resp) {
+        vm.pages = Math.ceil(resp.data.value / 10)
         tabs.show(vm, { tabList: true, tabCreate: true })
       })
     }

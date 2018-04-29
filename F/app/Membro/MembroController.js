@@ -19,7 +19,8 @@
 
     vm.refresh = function () {
       const page = parseInt($location.search().page) || 1
-      $http.get(`${url}?skip=${(page - 1) * 10}&limit=10`).then(function (response) {
+      const url_page = `${url}?skip=${(page - 1) * 10}&limit=10`
+      $http.get(url_page).then(function (response) {
         vm.Membro = { dizimos: [{}] }
         vm.Membros = response.data
         vm.calculateValues()
