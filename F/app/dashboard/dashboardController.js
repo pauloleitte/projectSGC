@@ -10,7 +10,7 @@ function DashboardController($http)
   vm.getdashboardCongregacao = function()
   {
 
-    const url = 'http://localhost:3003/api/congregacao/count'
+    const url = 'http://localhost:5000/api/congregacao/count'
     $http.get(url).then(function(response)
     {
         const value = response.data.value
@@ -19,7 +19,7 @@ function DashboardController($http)
   }
   vm.getdashboardMembro = function()
   {
-    const url = 'http://localhost:3003/api/membro/count'
+    const url = 'http://localhost:5000/api/membro/count'
     $http.get(url).then(function(response)
     {
         const value = response.data.value
@@ -28,7 +28,7 @@ function DashboardController($http)
   }
 
   vm.getdashboardEvento = function(){
-    const url = 'http://localhost:3003/api/evento/count'
+    const url = 'http://localhost:5000/api/evento/count'
     $http.get(url).then(function(response)
     {
         const value = response.data.value

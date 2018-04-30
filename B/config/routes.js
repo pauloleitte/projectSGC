@@ -6,8 +6,7 @@ module.exports = function(server) {
   const router = express.Router()
   server.use('/api', router)
   router.get('/', (req, res) => res.json({ message: 'Acesso Restrito!' }));
-
-  // Rotas Congregacao e Membros
+  
   const AuthService = require('../api/user/AuthService') 
   const CongregacaoService = require('../api/Congregacao/CongregacaoService')
   const MembroService = require('../api/Membro/MembroService')

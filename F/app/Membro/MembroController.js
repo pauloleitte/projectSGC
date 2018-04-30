@@ -9,7 +9,7 @@
   ])
   function membroController($http, $location, msgs, tabs, $filter) {
     const vm = this
-    const url = 'http://localhost:3003/api/membro'
+    const url = 'http://localhost:5000/api/membro'
 
     vm.listaDeSexos = ["Masculino", "Feminino"]
 

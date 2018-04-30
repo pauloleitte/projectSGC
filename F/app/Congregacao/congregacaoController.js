@@ -8,7 +8,7 @@
   ])
   function congregacaoController($http, msgs, tabs, $location) {
     const vm = this
-    const url = 'http://localhost:3003/api/congregacao'
+    const url = 'http://localhost:5000/api/congregacao'
     vm.refresh = function () {
       const page = parseInt($location.search().page) || 1
       const url_page = `${url}?skip=${(page - 1) * 10}&limit=10`

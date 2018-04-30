@@ -8,8 +8,8 @@
   ])
   function eventoController($http, msgs, tabs, $location) {
     const vm = this
-    const url = 'http://localhost:3003/api/evento'
-    const url_congregacao = 'http://localhost:3003/api/congregacao'
+    const url = 'http://localhost:5000/api/evento'
+    const url_congregacao = 'http://localhost:5000/api/congregacao'
 
 
     vm.listaDeSexos = ["Masculino", "Feminino"]

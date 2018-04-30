@@ -8,7 +8,7 @@
   ])
   function departamentoController($http, msgs, tabs, $location) {
     const vm = this
-    const url = 'http://localhost:3003/api/departamento'
+    const url = 'http://localhost:5000/api/departamento'
 
     vm.refresh = function () {
       const page = parseInt($location.search().page) || 1

@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 5000
+const port = 5000
 
 const bodyParser = require('body-parser')
 const express = require('express')
@@ -11,8 +11,8 @@ server.use(bodyParser.json())
 server.use(allowCors)
 server.use(queryParser())
 
-server.listen(PORT, function(){
-  console.log(`BACKEND is running on port ${PORT}.`)
+server.listen(process.env.PORT || port, function(){
+  console.log(`BACKEND is running on port ${port}.`)
 })
 
 module.exports = server
