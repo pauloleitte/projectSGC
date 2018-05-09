@@ -1,2 +1,7 @@
 # projectSGC
-Projeto para conclusão de Curos utilizando Node.JS e AngularJS
+
+Sitema de Gerenciameto Congregacional - SGC
+
+# Tecnologias
+
+Angular.JS e Node.JS
